@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "csharp4";
+}
+
+
+<div class="text-center">
+    <h1 class="display-3">Hello User</h1>
+    <h4 class="display-6">This Program outputs the greater of two squares from numbers given by You</h4>
+
+    <div>
+        @{
+            @if(ViewBag.Result != null){
+                <h5 class="display-8 text-danger"> <em>@ViewBag.Result</em> </h5>
+            }
+        }
+        <form asp-asp-controller="Home" asp-action="csharp4" method="POST">
+            <input type="text" placeholder="Number1" name="Number1"/>
+            <br /><br />
+            <input type="text" placeholder="Number2" name="Number2"/>
+            <br/>
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
